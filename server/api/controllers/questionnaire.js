@@ -70,7 +70,7 @@ async function generateInterviewQuestions(req,res) {
 async function getRoles(req,res){
   try {
     const rolesData = await Roles.find();
-    res.status(201).json({ rolesData:rolesData});
+    res.status(201).json(rolesData);
 }
 catch (e) {
     console.log('Error fetching roles',e);

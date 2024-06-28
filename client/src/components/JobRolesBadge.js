@@ -1,7 +1,7 @@
 import React from "react";
 
 const JobRolesBadge = ({ item, selectedRole, setSelecteRole }) => {
-    
+    console.log(selectedRole)
   return (
     <div>
       <button
