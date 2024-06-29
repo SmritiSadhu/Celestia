@@ -40,4 +40,3 @@ node index.js
 ```
 This will open your default browser to localhost:**8080**
 
-## Usages Details:
