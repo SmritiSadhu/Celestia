@@ -7,41 +7,11 @@ import Feedback from "./pages/feedback";
 import InterviewRecord from "./components/Record";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Final from "./components/Final";
 
 
 function App() {
-  
-  // const [interviewData,setInterviewData] = useState();
-  // const [errorMessage, setErrorMessage] = useState(null);
-  // const [formData, setFormData] = useState({
-  //   message: "",
-  // });
-  //const navigate = useNavigate();
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   if (!formData.message.trim()) {
-  //     setErrorMessage("Please describe the role, the field cannot be blank");
-  //     return;
-  //   }
-  //   try {
-  //     const response = await axios.post(
-  //       "http://localhost:8080/api/questionnaire/genaiquestion",
-  //       {
-  //         role: formData.message,
-  //       }
-  //     );
-     
-  //     setErrorMessage(null);
-      
-  //     navigate("/generate", { state: response.data.data});
-  //   } catch (error) {
-  //     console.error("Error fetching interview questions:", error);
-  //     setErrorMessage("Error generating interview questions.");
-  //   }
-  // };
-//console.log(interviewData)
-  
   return (
     <div>
       <Router>
@@ -51,14 +21,7 @@ function App() {
           <Route path="/tech" element={<GenerateTech />} />
           <Route path="/nontech" element={<GenerateNontech />} />
           <Route path="/feedback" element={<Feedback />} />
-          <Route path="/generate" element={<InterviewRecord />} />
-          {/* {interviewData.map((question) => (
-            <Route
-              key={question.id}
-              path={`/generate/${question.id}`}
-              element={<InterviewRecord question={question} />}
-            />
-          ))} */}
+          <Route path="/generate" element={<Final />} />
         </Routes>
       </Router>
     </div>

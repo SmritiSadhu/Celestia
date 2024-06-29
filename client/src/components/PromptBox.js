@@ -37,7 +37,6 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
       );
      
       setErrorMessage(null);
-      
       navigate("/generate", { state: response.data.data});
     } catch (error) {
       console.error("Error fetching interview questions:", error);

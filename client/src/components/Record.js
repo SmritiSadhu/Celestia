@@ -7,7 +7,6 @@ import {
   FaPlay,
   FaTrash,
 } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
 
 const sentiment = new Sentiment();
 const SpeechRecognition =
@@ -18,14 +17,7 @@ mic.continuous = true;
 mic.interimResults = true;
 mic.lang = "en-US";
 
-function InterviewRecord() {
-  const location = useLocation();
-  const [interviewData, setInterviewData] = useState([]);
-  useEffect(() => {
-    setInterviewData(location.state);
-  });
-  console.log(interviewData);
-  localStorage.setItem("interviewData", JSON.stringify(interviewData));
+function InterviewRecord({ questionId, roundIndex, roundLength, onAnswerUpdate }) {
   const [isListening, setIsListening] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [note, setNote] = useState("");
@@ -86,7 +78,6 @@ function InterviewRecord() {
         .map((result) => result[0])
         .map((result) => result.transcript)
         .join("");
-      console.log(transcript);
       setNote(transcript);
       mic.onerror = (event) => {
         console.log(event.error);
@@ -111,86 +102,93 @@ function InterviewRecord() {
 
   const handleClearNote = () => {
     setNote("");
-    setSavedNotes("");
+    setSavedNotes([]);
     setIsListening(false);
     setTimeLeft(120);
     clearInterval(timerRef.current);
   };
 
-  console.log(analysis);
+  const handleSubmit = () => {
+    const currentAnalysis = analysis[analysis.length - 1];
+
+    if (currentAnalysis) {
+      onAnswerUpdate(roundIndex, questionId, `${currentAnalysis.text}|${currentAnalysis.analysis.score}`);
+    }
+
+    setNote("");
+    setIsListening(false);
+    setTimeLeft(120);
+  };
 
   return (
-    <>
-      <div className="flex justify-center flex-col items-center my-12">
-        <div className="py-2 px-4 bg-blue-500 text-white rounded-full text-sm mb-4 border border-grey-300">
-          <span>Question 1</span>
-          <FaAngleRight />
-        </div>
-        <div className="w-[60%] py-8 px-4 text-center border rounded-lg shadow-lg">
-          <p className="text-xl font-bold mb-6">q1.hello</p>
-          <p>
-            Time left: {Math.floor(timeLeft / 60)}:
-            {timeLeft % 60 < 10 ? `0${timeLeft % 60}` : timeLeft % 60}
-          </p>
-          <div className="flex justify-center items-center">
-            {isListening ? (
-              <div className="flex space-x-4">
-                {isPaused ? (
-                  <button
-                    onClick={handlePlayNote}
-                    className="bg-red-700 inline-block p-3 rounded-full my-6 hover:opacity-80"
-                  >
-                    <FaPlay size={20} color="white" />
-                  </button>
-                ) : (
-                  <button
-                    onClick={handlePauseNote}
-                    className="bg-red-700 inline-block p-3 rounded-full my-6 hover:opacity-80"
-                  >
-                    <FaPause size={20} color="white" />
-                  </button>
-                )}
+    <div className="flex justify-center flex-col items-center my-12">
+      <div className="w-[60%] py-8 px-4 text-center border rounded-lg shadow-lg">
+        <p>
+          Time left: {Math.floor(timeLeft / 60)}:
+          {timeLeft % 60 < 10 ? `0${timeLeft % 60}` : timeLeft % 60}
+        </p>
+        <div className="flex justify-center items-center">
+          {isListening ? (
+            <div className="flex space-x-4">
+              {isPaused ? (
                 <button
-                  onClick={handleClearNote}
-                  disabled={!note}
+                  onClick={handlePlayNote}
                   className="bg-red-700 inline-block p-3 rounded-full my-6 hover:opacity-80"
                 >
-                  <FaTrash size={20} color="white" />
+                  <FaPlay size={20} color="white" />
                 </button>
-              </div>
-            ) : (
+              ) : (
+                <button
+                  onClick={handlePauseNote}
+                  className="bg-red-700 inline-block p-3 rounded-full my-6 hover:opacity-80"
+                >
+                  <FaPause size={20} color="white" />
+                </button>
+              )}
               <button
-                onClick={() => {
-                  setIsListening(true);
-                  setTimeLeft(120);
-                }}
+                onClick={handleClearNote}
+                disabled={!note}
                 className="bg-red-700 inline-block p-3 rounded-full my-6 hover:opacity-80"
               >
-                <FaMicrophone size={20} color="white" />
+                <FaTrash size={20} color="white" />
               </button>
-            )}
-          </div>
-          <hr />
-          <div className="mt-6">
-            <p style={{ fontWeight: "bold" }}>{note}</p>
-
-            {analysis.map((item, index) => (
-              <div key={index}>
-                <p>{item.text}</p>
-                {/* <p>Sentiment Score: {item.analysis.score}</p> */}
-              </div>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <button
+              onClick={() => {
+                setIsListening(true);
+                setTimeLeft(120);
+              }}
+              className="bg-red-700 inline-block p-3 rounded-full my-6 hover:opacity-80"
+            >
+              <FaMicrophone size={20} color="white" />
+            </button>
+          )}
+        </div>
+        <hr />
+        <div className="mt-6">
+          <p style={{ fontWeight: "bold" }}>{note}</p>
+          {analysis.map((item, index) => (
+            <div key={index}>
+              <p>{item.text}</p>
+            </div>
+          ))}
         </div>
         <button
           onClick={handleSaveNote}
           disabled={!note}
           className="inline-block p-3 rounded-full my-6 hover:opacity-80 py-2 px-4 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4 border border-grey-300"
         >
+          Save Note
+        </button>
+        <button
+          onClick={handleSubmit}
+          className="inline-block p-3 rounded-full my-6 hover:opacity-80 py-2 px-4 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4 border border-grey-300"
+        >
           Submit
         </button>
       </div>
-    </>
+    </div>
   );
 }
 
