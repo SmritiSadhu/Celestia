@@ -5,7 +5,7 @@ import { jobRolesNonTech } from "../data/roleTemplate";
 import JobRolesBadge from "../components/JobRolesBadge";
 import { Link, useLocation } from "react-router-dom";
 
-const GenerateNontech = () => {
+const GenerateNontech = (handleSubmit) => {
   const [selectedRole, setSelecteRole] = useState(jobRolesNonTech[0]);
   const location = useLocation();
   const {roles} = location.state || {};
@@ -49,7 +49,7 @@ const GenerateNontech = () => {
         ))}
       </div>
       <div>
-        <PromptBox selectedRole={selectedRole} />
+        <PromptBox selectedRole={selectedRole} handleSubmit={handleSubmit}/>
       </div>
     </div>
   );

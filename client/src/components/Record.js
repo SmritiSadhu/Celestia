@@ -1,6 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Sentiment from "sentiment";
-import { FaAngleRight, FaMicrophone, FaPause, FaPlay, FaTrash } from "react-icons/fa";
+import {
+  FaAngleRight,
+  FaMicrophone,
+  FaPause,
+  FaPlay,
+  FaTrash,
+} from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const sentiment = new Sentiment();
 const SpeechRecognition =
@@ -12,6 +19,13 @@ mic.interimResults = true;
 mic.lang = "en-US";
 
 function InterviewRecord() {
+  const location = useLocation();
+  const [interviewData, setInterviewData] = useState([]);
+  useEffect(() => {
+    setInterviewData(location.state);
+  });
+  console.log(interviewData);
+  localStorage.setItem("interviewData", JSON.stringify(interviewData));
   const [isListening, setIsListening] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [note, setNote] = useState("");
@@ -115,9 +129,9 @@ function InterviewRecord() {
         <div className="w-[60%] py-8 px-4 text-center border rounded-lg shadow-lg">
           <p className="text-xl font-bold mb-6">q1.hello</p>
           <p>
-              Time left: {Math.floor(timeLeft / 60)}:
-              {timeLeft % 60 < 10 ? `0${timeLeft % 60}` : timeLeft % 60}
-            </p>
+            Time left: {Math.floor(timeLeft / 60)}:
+            {timeLeft % 60 < 10 ? `0${timeLeft % 60}` : timeLeft % 60}
+          </p>
           <div className="flex justify-center items-center">
             {isListening ? (
               <div className="flex space-x-4">
@@ -156,10 +170,10 @@ function InterviewRecord() {
               </button>
             )}
           </div>
-          <hr/>
+          <hr />
           <div className="mt-6">
             <p style={{ fontWeight: "bold" }}>{note}</p>
-            
+
             {analysis.map((item, index) => (
               <div key={index}>
                 <p>{item.text}</p>
