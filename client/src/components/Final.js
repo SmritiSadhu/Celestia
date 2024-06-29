@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import InterviewRecord from "./Record";
+import axios from 'axios';
 
 const Final = () => {
-    const location = useLocation();
-//   const [interviewData, setInterviewData] = useState(data);
-const [interviewData, setInterviewData] = useState(location.state || []);
+  const location = useLocation();
+  const [interviewData, setInterviewData] = useState(location.state || []);
+  const [errorMessage, setErrorMessage] = useState(null);
 
-    console.log(interviewData)
+  console.log(interviewData)
   const handleUpdateAnswer = (roundIndex, questionId, answer) => {
     const updatedData = [...interviewData];
     const round = updatedData[roundIndex];
@@ -17,6 +18,17 @@ const [interviewData, setInterviewData] = useState(location.state || []);
     }
     setInterviewData(updatedData);
   };
+
+  const handleFinishInterview = async () => {
+    try {
+      const response = await axios.post('http://localhost:8080/api/questionnaire/getfeedback', {
+        QnA: interviewData,
+      });
+      console.log(response.data);
+    } catch (error) {
+      console.log('Error sending feedback', error);
+    }
+  }
 
   return (
     <div>
@@ -36,6 +48,10 @@ const [interviewData, setInterviewData] = useState(location.state || []);
           ))}
         </div>
       ))}
+      {errorMessage && (
+        <p className="text-red-700 text-center font-semibold my-6">{errorMessage}</p>
+      )}
+      <button onClick={handleFinishInterview} className="mt-4 bg-cyan-500 py-2 px-3 text-[#ffffff] rounded-md shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.2)]">FINISH INTERVIEW</button>
     </div>
   );
 };
