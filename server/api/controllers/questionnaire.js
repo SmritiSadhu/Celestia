@@ -15,6 +15,7 @@ async function generateInterviewQuestions(req,res) {
   // if(!token)
   //   return res.status(400).json({message:'Not authorized/missing token in body'})
   const userPrompt = req.body.role;
+  console.log(userPrompt)
   if (!userPrompt) {
     return res.status(400).json({ message: 'Please provide a role as a query parameter.' });
   }
@@ -50,7 +51,7 @@ async function generateInterviewQuestions(req,res) {
         _id:new mongoose.Types.ObjectId(),
         question:question,
         answer:``,
-        feedback:``
+        feedback:``,
       }))
     };
   });
