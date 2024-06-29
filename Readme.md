@@ -19,6 +19,12 @@ npm start
 ```
 This will open your default browser to localhost:**3000**.
 
+
+---
+
+---
+
+
 :desktop_computer:**Setup For Server:**
 1. Navigate to the server directory:
 ```
