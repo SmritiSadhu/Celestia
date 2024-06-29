@@ -8,7 +8,12 @@ const authRoutes = require('./api/routes/auth');
 const genAiRoutes = require('./api/routes/questionnaire')
 dotenv.config();
 const PORT = 8080;
-app.use(cors())
+const corsOption = {
+  origin: ['http://localhost:3000'],
+  credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE"],
+}
+app.use(corsOption())
 app.use(bodyParser.json());
 const MONGO_URL = process.env.MONGO_URL;
 

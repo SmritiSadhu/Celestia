@@ -1,0 +1,74 @@
+[
+  {
+    "roundName": "Technical Screening",
+    "questions": [
+      {
+        "_id": "667f84742f1951f1100e9b06",
+        "question": "Explain the difference between supervised and unsupervised machine learning algorithms.",
+        "answer": "",
+        "feedback": ""
+      },
+      {
+        "_id": "667f84742f1951f1100e9b07",
+        "question": "Describe the steps involved in building a machine learning model.",
+        "answer": "",
+        "feedback": ""
+      }
+    ],
+    "_id": "667f84742f1951f1100e9b0f"
+  },
+  {
+    "roundName": "Technical Interview",
+    "questions": [
+      {
+        "_id": "667f84742f1951f1100e9b08",
+        "question": "What are the key components of a cloud computing platform?",
+        "answer": "",
+        "feedback": ""
+      },
+      {
+        "_id": "667f84742f1951f1100e9b09",
+        "question": "Discuss the advantages and disadvantages of different cloud computing deployment models.",
+        "answer": "",
+        "feedback": ""
+      }
+    ],
+    "_id": "667f84742f1951f1100e9b10"
+  },
+  {
+    "roundName": "Design Challenge",
+    "questions": [
+      {
+        "_id": "667f84742f1951f1100e9b0a",
+        "question": "Design a system for managing a large-scale e-commerce platform.",
+        "answer": "",
+        "feedback": ""
+      },
+      {
+        "_id": "667f84742f1951f1100e9b0b",
+        "question": "Propose a solution for improving the performance of a real-time streaming application.",
+        "answer": "",
+        "feedback": ""
+      }
+    ],
+    "_id": "667f84742f1951f1100e9b11"
+  },
+  {
+    "roundName": "Cultural Fit Interview",
+    "questions": [
+      {
+        "_id": "667f84742f1951f1100e9b0c",
+        "question": "How do you work effectively in a collaborative team environment?",
+        "answer": "",
+        "feedback": ""
+      },
+      {
+        "_id": "667f84742f1951f1100e9b0d",
+        "question": "Describe your experience in handling complex and stressful projects.",
+        "answer": "",
+        "feedback": ""
+      }
+    ],
+    "_id": "667f84742f1951f1100e9b12"
+  }
+]

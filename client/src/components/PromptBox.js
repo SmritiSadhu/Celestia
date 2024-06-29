@@ -7,6 +7,7 @@ function PromptBox({ selectedRole }) {
     message: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
+  const [questions, setQuestions] = useState([]);
   useEffect(() => {
     if (selectedRole && selectedRole.role !== "Custom Role") {
       const combinedMessage = `${
@@ -31,8 +32,23 @@ function PromptBox({ selectedRole }) {
       return;
     }
     setErrorMessage("");
+    getQuestionnaire();
+  }
+  async function getQuestionnaire (){
+    try {
+      const response = await axios.post('http://localhost:8080/api/questionnaire/genaiquestion', {
+        role: formData.message,
+      });
+      console.log(response)
+      const data = response.data;
+    } catch (error) {
+      console.error("Error generating questions:", error);
+      setErrorMessage("Failed to generate questions. Please try again.");
+    }
   }
 
+
+  console.log(questions)
   return (
     <>
       <form onSubmit={handleSubmit}>
