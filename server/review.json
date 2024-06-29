@@ -1,0 +1,74 @@
+[
+  {
+    "roundName": "Initial Screening",
+    "questions": [
+      {
+        "_id": "66805d5437ac4fe9f0da0705",
+        "question": "Tell us about your background and why you're interested in this role.",
+        "answer": "",
+        "feedback": "This question was skipped, so I cannot evaluate your response at this time."
+      },
+      {
+        "_id": "66805d5437ac4fe9f0da0706",
+        "question": "What's your understanding of UI/UX design and its importance?",
+        "answer": "",
+        "feedback": "Your response lacks a comprehensive understanding of UI/UX design and its importance in product development. It would be beneficial to enhance your knowledge in this area, as UI/UX plays a pivotal role in creating user-centric and engaging products. | -1Personality type: NervousRating: 1/5To improve your understanding of UI/UX design, consider enrolling in courses, reading books, and practicing hands-on projects. This will help you develop a stronger foundation in this essential aspect of product management."
+      },
+      {
+        "_id": "66805d5437ac4fe9f0da0707",
+        "question": "Describe a project where you successfully improved user experience.",
+        "answer": "hello how are you|0",
+        "feedback": "Your answer is confusing and does not address the question. Please provide a specific example of a project where you successfully improved user experience, including details about the problem you solved, the solution you implemented, and the results you achieved.Rating: 1/5To improve your communication skills, try to be more specific and provide concrete examples when answering questions. Additionally, avoid using vague language and buzzwords."
+      }
+    ],
+    "_id": "66805d5437ac4fe9f0da070f"
+  },
+  {
+    "roundName": "Technical Assessment",
+    "questions": [
+      {
+        "_id": "66805d5437ac4fe9f0da0708",
+        "question": "Design a user interface for a mobile app that allows users to track their fitness progress.",
+        "answer": "hello how are you what are you doing|0",
+        "feedback": "Your answer seems to be a bit generic and does not provide any specific details about the user interface. It would be helpful if you could provide more specific examples of the features and functionality that you would include in the app. Additionally, it would be helpful if you could provide more details about the target audience for the app and how you would design the interface to meet their needs.  Here are some suggestions for improving your answer:* Provide more specific examples of the features and functionality that you would include in the app.* Provide more details about the target audience for the app and how you would design the interface to meet their needs.* Use more strong action verbs and less buzzwords.* Be more confident in your answers.Your answer demonstrates a nervous personality type. You seem to be a bit hesitant and unsure of your answers. Try to be more confident and assertive in your answers.Overall, I would rate your softskills a 2 out of 5. You have some good ideas, but you need to work on your communication skills and your confidence."
+      },
+      {
+        "_id": "66805d5437ac4fe9f0da0709",
+        "question": "Discuss your approach to conducting user research and gathering feedback.",
+        "answer": "",
+        "feedback": "Your response demonstrates a strong understanding of user research methods and techniques. You have clearly articulated your approach to user research, covering aspects such as user segmentation, qualitative and quantitative research methods, and feedback analysis.|5 You have used strong action verbs and provided specific examples, indicating a confident and proactive approach to gathering user insights. Your focus on iterating based on user feedback shows a commitment to continuous improvement and user-centric development.Rating: 4.5/5To further enhance your skills, consider incorporating user research into the early stages of product development to ensure that user needs are deeply embedded in the product vision and roadmap. Additionally, exploring advanced user research techniques, such as contextual inquiry and eye-tracking studies, can provide deeper insights into user behavior and preferences."
+      },
+      {
+        "_id": "66805d5437ac4fe9f0da070a",
+        "question": "How do you ensure accessibility and inclusivity in your designs?",
+        "answer": "",
+        "feedback": "The answer has 0 sentiment analysis count, which indicates a neutral response. The candidate seems to have a basic understanding of accessibility and inclusivity but could provide more specific examples of how they incorporate these principles into their designs. They should also demonstrate a deeper understanding of the challenges faced by users with disabilities and how their designs can mitigate these challenges. Additionally, they should be able to articulate their approach to testing and evaluating the accessibility of their designs.Rating: 3 out of 5To improve their softskills, the candidate should:* Provide more specific examples of how they incorporate accessibility and inclusivity into their designs.* Demonstrate a deeper understanding of the challenges faced by users with disabilities and how their designs can mitigate these challenges.* Articulate their approach to testing and evaluating the accessibility of their designs."
+      }
+    ],
+    "_id": "66805d5437ac4fe9f0da0710"
+  },
+  {
+    "roundName": "Culture Fit",
+    "questions": [
+      {
+        "_id": "66805d5437ac4fe9f0da070b",
+        "question": "How do you handle feedback and criticism in a collaborative work environment?",
+        "answer": "",
+        "feedback": "You seem to have a strong understanding of how to handle feedback and criticism in a collaborative work environment. You are confident in your ability to take feedback gracefully and use it to improve your work. You are also able to give feedback to others in a constructive and helpful way. You are a valuable asset to any team and I am confident that you will be successful in your career.Rating: 5/5"
+      },
+      {
+        "_id": "66805d5437ac4fe9f0da070c",
+        "question": "What are your values and how do they align with our company culture?",
+        "answer": "",
+        "feedback": "You did not provide any answer to the question. Please provide a response so that I can assess your product management skills and provide feedback."
+      },
+      {
+        "_id": "66805d5437ac4fe9f0da070d",
+        "question": "Tell us about a time when you had to overcome a challenge or setback.",
+        "answer": "",
+        "feedback": "Your answer lacks detail and specificity. You did not provide enough context about the challenge or setback you faced, and you did not explain how you overcame it. As a result, your answer is not very informative or helpful.In order to improve your answer, you should provide more details about the challenge or setback you faced. You should also explain what steps you took to overcome it, and what the results of your efforts were. By providing more details, you will make your answer more informative and helpful.Additionally, you should try to use more strong action verbs in your answer. This will help to make your answer more engaging and interesting to read.**Rating:** 2/5**Personality type:** Nervous"
+      }
+    ],
+    "_id": "66805d5437ac4fe9f0da0711"
+  }
+]

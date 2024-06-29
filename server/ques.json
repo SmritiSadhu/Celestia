@@ -3,120 +3,72 @@
     "roundName": "Initial Screening",
     "questions": [
       {
-        "_id": "6680011c46cc4d63860b58c6",
+        "_id": "66805d5437ac4fe9f0da0705",
         "question": "Tell us about your background and why you're interested in this role.",
         "answer": "",
         "feedback": ""
       },
       {
-        "_id": "6680011c46cc4d63860b58c7",
-        "question": "What do you understand by business analysis and how do you approach it?",
+        "_id": "66805d5437ac4fe9f0da0706",
+        "question": "What's your understanding of UI/UX design and its importance?",
         "answer": "",
         "feedback": ""
       },
       {
-        "_id": "6680011c46cc4d63860b58c8",
-        "question": "Can you provide an example of a successful business analysis project you've worked on?",
+        "_id": "66805d5437ac4fe9f0da0707",
+        "question": "Describe a project where you successfully improved user experience.",
         "answer": "",
         "feedback": ""
       }
     ],
-    "_id": "6680011c46cc4d63860b58d6"
+    "_id": "66805d5437ac4fe9f0da070f"
   },
   {
     "roundName": "Technical Assessment",
     "questions": [
       {
-        "_id": "6680011c46cc4d63860b58c9",
-        "question": "Explain the difference between data aggregation and data mining.",
+        "_id": "66805d5437ac4fe9f0da0708",
+        "question": "Design a user interface for a mobile app that allows users to track their fitness progress.",
         "answer": "",
         "feedback": ""
       },
       {
-        "_id": "6680011c46cc4d63860b58ca",
-        "question": "What techniques do you use for data visualization?",
+        "_id": "66805d5437ac4fe9f0da0709",
+        "question": "Discuss your approach to conducting user research and gathering feedback.",
         "answer": "",
         "feedback": ""
       },
       {
-        "_id": "6680011c46cc4d63860b58cb",
-        "question": "Describe your experience with business intelligence tools.",
+        "_id": "66805d5437ac4fe9f0da070a",
+        "question": "How do you ensure accessibility and inclusivity in your designs?",
         "answer": "",
         "feedback": ""
       }
     ],
-    "_id": "6680011c46cc4d63860b58d7"
+    "_id": "66805d5437ac4fe9f0da0710"
   },
   {
-    "roundName": "Business Case Analysis",
+    "roundName": "Culture Fit",
     "questions": [
       {
-        "_id": "6680011c46cc4d63860b58cc",
-        "question": "Walk us through your process for analyzing business requirements.",
+        "_id": "66805d5437ac4fe9f0da070b",
+        "question": "How do you handle feedback and criticism in a collaborative work environment?",
         "answer": "",
         "feedback": ""
       },
       {
-        "_id": "6680011c46cc4d63860b58cd",
-        "question": "How do you ensure that your solutions meet business needs?",
+        "_id": "66805d5437ac4fe9f0da070c",
+        "question": "What are your values and how do they align with our company culture?",
         "answer": "",
         "feedback": ""
       },
       {
-        "_id": "6680011c46cc4d63860b58ce",
-        "question": "Can you give an example of a time you had to manage project risks and challenges?",
+        "_id": "66805d5437ac4fe9f0da070d",
+        "question": "Tell us about a time when you had to overcome a challenge or setback.",
         "answer": "",
         "feedback": ""
       }
     ],
-    "_id": "6680011c46cc4d63860b58d8"
-  },
-  {
-    "roundName": "Stakeholder Management",
-    "questions": [
-      {
-        "_id": "6680011c46cc4d63860b58cf",
-        "question": "How do you build relationships with business stakeholders?",
-        "answer": "",
-        "feedback": ""
-      },
-      {
-        "_id": "6680011c46cc4d63860b58d0",
-        "question": "What strategies do you use for communicating complex technical concepts to non-technical stakeholders?",
-        "answer": "",
-        "feedback": ""
-      },
-      {
-        "_id": "6680011c46cc4d63860b58d1",
-        "question": "Can you describe your experience in working with cross-functional teams?",
-        "answer": "",
-        "feedback": ""
-      }
-    ],
-    "_id": "6680011c46cc4d63860b58d9"
-  },
-  {
-    "roundName": "Final Interview",
-    "questions": [
-      {
-        "_id": "6680011c46cc4d63860b58d2",
-        "question": "Why do you think you're the best candidate for this role?",
-        "answer": "",
-        "feedback": ""
-      },
-      {
-        "_id": "6680011c46cc4d63860b58d3",
-        "question": "What are your salary expectations?",
-        "answer": "",
-        "feedback": ""
-      },
-      {
-        "_id": "6680011c46cc4d63860b58d4",
-        "question": "Do you have any questions for us?",
-        "answer": "",
-        "feedback": ""
-      }
-    ],
-    "_id": "6680011c46cc4d63860b58da"
+    "_id": "66805d5437ac4fe9f0da0711"
   }
 ]

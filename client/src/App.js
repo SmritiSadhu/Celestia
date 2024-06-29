@@ -8,6 +8,7 @@ import InterviewRecord from "./components/Record";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Final from "./components/Final";
+import PerformanceAnalysis from "./pages/performanceAnalysis";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/nontech" element={<GenerateNontech />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/generate" element={<Final />} />
+          <Route path="/analysis" element={<PerformanceAnalysis />} />
         </Routes>
       </Router>
     </div>

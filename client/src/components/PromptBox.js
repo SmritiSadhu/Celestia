@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Loader from "../components/loader"; // Import the Loader component
 
 const GenerateInterviewQuestions = ({ selectedRole }) => {
   const [role, setRole] = useState("");
@@ -8,7 +9,9 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
   const [formData, setFormData] = useState({
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false); // Loading state
   const navigate = useNavigate();
+
   useEffect(() => {
     if (selectedRole && selectedRole.role !== "Custom Role") {
       const template = `${
@@ -28,6 +31,7 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
       setErrorMessage("Please describe the role, the field cannot be blank");
       return;
     }
+    setIsLoading(true); // Start loading
     try {
       const response = await axios.post(
         "http://localhost:8080/api/questionnaire/genaiquestion",
@@ -37,10 +41,12 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
       );
      
       setErrorMessage(null);
-      navigate("/generate", { state: response.data.data});
+      navigate("/generate", { state: response.data.data });
     } catch (error) {
       console.error("Error fetching interview questions:", error);
       setErrorMessage("Error generating interview questions.");
+    } finally {
+      setIsLoading(false); // Stop loading
     }
   };
 
@@ -56,7 +62,7 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
           type="text"
           id="role"
           value={formData.message}
-          placeholder="Select a job role or paste you own description here"
+          placeholder="Select a job role or paste your own description here"
           onChange={(e) =>
             setFormData({ ...formData, message: e.target.value })
           }
@@ -66,7 +72,9 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
           cols={90}
         />
         <div className="flex justify-center">
-          
+          {isLoading ? (
+            <Loader />
+          ) : (
             <button
               type="submit"
               className="mt-4 bg-cyan-500 py-2 px-3 text-[#ffffff] rounded-md shadow-[inset_0rem_0.2rem_0.4rem_0_rgb(0,0,0,0.2)]"
@@ -74,30 +82,9 @@ const GenerateInterviewQuestions = ({ selectedRole }) => {
             >
               Generate Questions
             </button>
-       
+          )}
         </div>
       </form>
-
-      {/* {interviewData && (
-        <div>
-          <h2>Interview Questions for {role}</h2>
-          
-          {interviewData.map((round) => (
-            <div key={round._id}>
-              <h3 className="font-bold">{round.roundName}</h3>
-              <ul>
-                {round.questions.map((question) => (
-                  <li key={question._id}>
-                    <p>
-                      <strong>Question:</strong> {question.question}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )} */}
     </div>
   );
 };

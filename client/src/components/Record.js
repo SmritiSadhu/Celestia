@@ -174,12 +174,13 @@ function InterviewRecord({ questionId, roundIndex, roundLength, onAnswerUpdate }
             </div>
           ))}
         </div>
+        <div className="flex gap-4 justify-center items-center">
         <button
           onClick={handleSaveNote}
           disabled={!note}
           className="inline-block p-3 rounded-full my-6 hover:opacity-80 py-2 px-4 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4 border border-grey-300"
         >
-          Save Note
+          Save Answer
         </button>
         <button
           onClick={handleSubmit}
@@ -187,6 +188,8 @@ function InterviewRecord({ questionId, roundIndex, roundLength, onAnswerUpdate }
         >
           Submit
         </button>
+        </div>
+        
       </div>
     </div>
   );
