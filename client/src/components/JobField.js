@@ -11,7 +11,7 @@ const JobField = ({techRoles, nontechRoles}) => {
         state={{roles: techRoles}}
         className="w-[380px] bg-gray-200 rounded-lg p-6 shadow-neumorphic hover:scale-105 hover:text-primary cursor-pointer text-center"
       >
-        <img src={tech} alt="tech" className="rounded-lg" />
+        <img src={tech} alt="tech" className="rounded-lg mb-4" />
         <span>Technical Roles</span>
       </Link>
       <Link
@@ -19,7 +19,7 @@ const JobField = ({techRoles, nontechRoles}) => {
         state={{roles: nontechRoles}}
         className="w-[380px] bg-gray-200 rounded-lg p-6 shadow-neumorphic hover:scale-105 hover:text-primary cursor-pointer text-center"
       >
-        <img src={nontech} alt="nontech" className="rounded-lg" />
+        <img src={nontech} alt="nontech" className="rounded-lg mb-4" />
         <span>Non-Technical Roles</span>
       </Link>
     </div>

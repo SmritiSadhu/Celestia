@@ -14,6 +14,10 @@ module.exports = {
     colors: {
       primary: "#1679AB",
       gradient: "#daeef7",
+      gray:{
+        200: "#e5e7eb",
+        300: "#d1d5db",
+      },
       cyan:{
         500:"#06b6d4",
         600:"#0891b2",
