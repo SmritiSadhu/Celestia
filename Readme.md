@@ -5,7 +5,7 @@
 ![WhatsApp Image 2024-06-30 at 1 58 37 AM](https://github.com/SmritiSadhu/Celestia/assets/103137871/86826719-8d1f-4ea0-8086-7a116b7cb91f)
 ## Getting started
 :bust_in_silhouette:**Setup For Client:**
-1. Navigate to the client directory:
+1. From root directory, Navigate to the client directory:
 ```
 cd client
 ```
@@ -17,7 +17,7 @@ npm install
 ```
 npm start
 ```
-This will open your default browser to localhost:**3000**.
+This will open your default browser to localhost:**3000**. This is the home page, where users can select their domain/industry of interest.
 
 
 ---
@@ -26,7 +26,7 @@ This will open your default browser to localhost:**3000**.
 
 
 :desktop_computer:**Setup For Server:**
-1. Navigate to the server directory:
+1. Navigate to the server directory from root directory as well:
 ```
 cd  server
 ```
@@ -40,3 +40,9 @@ node index.js
 ```
 This will open your default browser to localhost:**8080**
 
+**NOTES**
+For the backend services to run you need to get your API keys from Gemini Api's documentation website.
+```
+https://aistudio.google.com/app/apikey
+```
+Also configure MongoDB for database collection, to store the interview data.
