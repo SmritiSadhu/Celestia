@@ -46,3 +46,21 @@ For the backend services to run you need to get your API keys from Gemini Api's 
 https://aistudio.google.com/app/apikey
 ```
 Also configure MongoDB for database collection, to store the interview data.
+
+
+**Tech Stack Used**
+```
+React.Js
+```
+```
+MongoDB
+```
+```
+Express.Js
+```
+```
+Npm packages - sentiment analysis
+```
+```
+GenAI api - Gemini-pro
+```
